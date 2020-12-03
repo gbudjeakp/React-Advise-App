@@ -1,5 +1,5 @@
 # About App
-This app was created to practice using the Fetch API with React Hooks.
+This app was created to practice using the Fetch API with React Hooks and UseEffect.
 
 ### `npm start`
 Runs the app in the development mode.\
