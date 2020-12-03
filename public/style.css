@@ -7,9 +7,14 @@ body{
 }
 
 .box{
- margin: 150px;
  border: 1px solid white;
  border-radius: 25px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ min-height: 100vh;
 }
 
 .heading{
@@ -17,7 +22,7 @@ body{
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #0f2410; /* Green */
     border: none;
     color: white;
     padding: 15px 30px;

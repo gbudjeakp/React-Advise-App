@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 function App () {
@@ -6,19 +6,14 @@ function App () {
 
   const url = 'https://api.adviceslip.com/advice'
 
-  useEffect(() => {
+  function fetchAdvise () {
     axios.get(url)
       .then(response => {
-        console.log(response)
         setAdvise(response.data)
       })
       .catch(error => {
         console.log(error)
       })
-  }, [url])
-
-  function fetchAdvise () {
-    setAdvise()
   }
 
   if (advise) {
@@ -31,7 +26,8 @@ function App () {
   } else {
     return (
       <div className='box'>
-        <h1>Fetching Advise ...</h1>
+        <h1>Click to get Advise</h1>
+        <button className='button' onClick={fetchAdvise}>Get Advise</button>
       </div>
     )
   }
